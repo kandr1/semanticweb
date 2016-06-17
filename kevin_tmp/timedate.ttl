@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dt: <https://www.w3.org/2006/time>
+@prefix cal: <http://example.org/stuff/1.0/> .
+
+
+
+
+<http://example.org/event>
+dc:title "Event specification for Calendar" ;
+	a       :Interval ;
+	:hasBeginning :eventStart ;
+	:hasEnd :eventEnd .
+
+
+<http://example.org/event>
+dc:title "Start instant of an calendar event" ;
