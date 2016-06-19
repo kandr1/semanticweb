@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:time="http://www.w3.org/2006/time#"
+  xmlns:timedef="http://k-tipp.bplaced.net/timedefinition#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns="http://k-tipp.bplaced.net/cdss4nsar/timedefinition">
+  
+<!--  <rdf:Description rdf:about="K">
+	<timedef:Calendar rdf:type="timedef:Calendar">
+		<timedef:hasEvents>
+			<timedef:Event>
+				<title>testEvent</title>
+				<hasBeginning>
+					<time:Instant>
+						 <time:inXSDDateTime>2006-11-05T18:00:00-5:00</time:inXSDDateTime>
+					</time:Instant>
+				</hasBeginning>
+				<hasEnd>
+					<time:Instant>
+						 <time:inXSDDateTime>2006-11-05T19:00:00-5:00</time:inXSDDateTime>
+					</time:Instant>
+				</hasEnd>
+			</timedef:Event>
+		</timedef:hasEvents>
+		<hasOwner rdf:resource="me"></hasOwner>
+	</timedef:Calendar>
+  </rdf:Description>-->
+  <timedef:hasEvents>
+			<timedef:Event>
+				<title>testEvent</title>
+				<hasBeginning>
+					<time:Instant>
+						 <time:inXSDDateTime>2006-11-05T18:00:00-5:00</time:inXSDDateTime>
+					</time:Instant>
+				</hasBeginning>
+				<hasEnd>
+					<time:Instant>
+						 <time:inXSDDateTime>2006-11-05T19:00:00-5:00</time:inXSDDateTime>
+					</time:Instant>
+				</hasEnd>
+			</timedef:Event>
+		</timedef:hasEvents>
+  
+	<foaf:Person rdf:about="me">
+		<foaf:name>sdfg sdfg</foaf:name>
+		<timedef:Calendar rdf:type="timedef:Calendar">
+		
+		<hasOwner rdf:resource="me"></hasOwner>
+	</timedef:Calendar>
+	</foaf:Person>
+</rdf:RDF>

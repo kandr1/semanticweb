@@ -1,0 +1,44 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:time="http://www.w3.org/2006/time#"
+	xmlns="">
+
+
+	<rdfs:Class ID="Calendar">
+		<rdfs:label>A calendar to maintain and share your events</rdfs:label>
+	</rdfs:Class>
+
+	<rdfs:Class ID="Event">
+		<rdfs:label>An event of a calendar</rdfs:label>
+	</rdfs:Class>
+	
+	
+	<rdf:Property ID="hasTitle">
+		<rdfs:range rdf:resource="rdfs:Literal"/>
+		<rdfs:domain rdf:resource="#Calendar"/>
+	</rdf:Property>
+	
+	<rdf:Property ID="hasEvent">
+		<rdfs:range rdf:resource="#Event"/>
+		<rdfs:domain rdf:resource="#Calendar"/>
+	</rdf:Property>
+	
+	<rdf:Property ID="hasStart">
+		<rdfs:range rdf:resource="time:Instant"/>
+		<rdfs:domain rdf:resource="#Event"/>
+	</rdf:Property>
+	<rdf:Property ID="hasEnd">
+		<rdfs:range rdf:resource="time:Instant"/>
+		<rdfs:domain rdf:resource="#Event"/>
+	</rdf:Property>
+	<rdf:Property ID="hasDuration">
+		<rdfs:range rdf:resource="time:Interval"/>
+		<rdfs:domain rdf:resource="#Event"/>
+	</rdf:Property>
+	
+	<rdf:Property ID="hasCalendar">
+		<rdfs:range rdf:resource="#Calendar"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	</rdf:Property>
+</rdf:RDF>

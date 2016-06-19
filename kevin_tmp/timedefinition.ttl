@@ -3,23 +3,33 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix : <http://example.org/foo> .
+@prefix : <http://k-tipp.bplaced.net/timedefinition> .
 
 _:x
 	a owl:Class;
 	owl:oneOf (time:hasEnd time:hasDurationDescription) .
 	
-_:involves
+:involves
+	rdf:type rdfs:bag;
 	rdfs:domain foaf:Person .
 
-:event
+:Event
 	a :Interval ;
+	:title rdfs:Literal;
 	:hasBeginning time:hasBeginning ;
 	:hasEnd _:x ;
-	:involves _:involves ;
-	:owner foaf:Person .
+	:involves :involves ;
 
+:Events
+	rdf:type rdfs:bag;
+	rdfs:domain :Event .
 
+:Calendar
+	a owl:Class;
+	hasEvents: :Events;
+	hasOwner: _:owner .
+
+_:owner
 	
 # :meetingEnd
 #       a       :Instant ;
